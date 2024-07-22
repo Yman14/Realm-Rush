@@ -12,6 +12,8 @@ public class TowerLocator : MonoBehaviour
     void Start()
     {
         //bug - if theres no target, you cant place tower
+        //and if the target died it will just keep shooting at the place
+        //where the target was destroyed. very bad code
         target = FindObjectOfType<EnemyMover>().transform;
     }
 

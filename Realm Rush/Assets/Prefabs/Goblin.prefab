@@ -538,19 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175d94058ac8d524896fe0fec1cdd0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  path: []
   enemyMovementSpeed: 0.8
 --- !u!1 &1300070071406548
 GameObject:
@@ -923,7 +911,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitPoint: 5
-  currentHitPoint: 5
 --- !u!1 &1562084649372146
 GameObject:
   m_ObjectHideFlags: 0
