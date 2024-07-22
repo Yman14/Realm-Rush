@@ -11,6 +11,7 @@ public class TowerLocator : MonoBehaviour
 
     void Start()
     {
+        //bug - if theres no target, you cant place tower
         target = FindObjectOfType<EnemyMover>().transform;
     }
 

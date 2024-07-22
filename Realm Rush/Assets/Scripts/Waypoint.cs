@@ -5,6 +5,8 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     [SerializeField] bool isPlaceable;
+    public bool IsPlaceable{    get { return isPlaceable; }}
+
     [SerializeField] GameObject towerPrefab;
     
     [Tooltip("Towers spawn at runtime will be place here.")]GameObject towerPlacement;

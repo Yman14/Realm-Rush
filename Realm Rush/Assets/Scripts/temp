@@ -4,3 +4,6 @@ put sphere collider as detector for enemy
 if enemy is detected, shoot else dont shoot
 
 shoot by enabling or disabling partcle system
+
+
+tower locator script - 1bug
