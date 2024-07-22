@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5691736490918785523}
   - component: {fileID: 7370151334680954455}
+  - component: {fileID: 2664991441203160198}
   m_Layer: 0
   m_Name: (0, 0)
   m_TagString: Untagged
@@ -47,6 +48,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e90f95e00340404f9731af9fdd9a73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlaceable: 1
+--- !u!65 &2664991441203160198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599999792669258952}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.1, y: 9.1, z: 9.1}
+  m_Center: {x: 0.24, y: -4.49, z: -0.13}
 --- !u!1 &4377081805491057245
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +425,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4792822069781494, guid: 64ee9c9da5098a141940ff4801cc9550, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65862053748152222, guid: 64ee9c9da5098a141940ff4801cc9550, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
