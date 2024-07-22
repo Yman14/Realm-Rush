@@ -457,7 +457,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4887270080479870}
   - component: {fileID: 95760122612387900}
-  - component: {fileID: 114795339589024464}
   - component: {fileID: 135975656248482850}
   - component: {fileID: 8773676314018503938}
   m_Layer: 0
@@ -477,7 +476,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4272930173181900}
@@ -506,30 +505,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &114795339589024464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258991314359982}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 153dd393b80768d4d8587c484df95783, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootElement: {fileID: 0}
-  bullet: {fileID: 1240887441953726, guid: 8a976dcd328a4664c85144f33b9c46b0, type: 3}
-  Enemybug: {fileID: 1548466523428658}
-  Creature_Damage: 10
-  Speed: 2
-  waypoints:
-  - {fileID: 4951462613596946, guid: 49d144698851ec547865738ab31e7325, type: 3}
-  previous_Speed: 0
-  anim: {fileID: 0}
-  Enemy_Hp: {fileID: 0}
-  target: {fileID: 4532943714850888}
-  EnemyTarget: {fileID: 0}
 --- !u!135 &135975656248482850
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -545,7 +520,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
@@ -563,8 +538,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175d94058ac8d524896fe0fec1cdd0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: []
-  enemyMovementSpeed: 1
+  path:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyMovementSpeed: 0.8
 --- !u!1 &1300070071406548
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +789,7 @@ GameObject:
   - component: {fileID: 23034285152922374}
   - component: {fileID: 135245969397926008}
   - component: {fileID: 54286000085106508}
-  - component: {fileID: 114734922601410596}
+  - component: {fileID: 7678969109193357575}
   m_Layer: 0
   m_Name: Enemy_Bug
   m_TagString: enemyBug
@@ -890,7 +877,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -923,7 +910,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114734922601410596
+--- !u!114 &7678969109193357575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -932,10 +919,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1548466523428658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6d63bc97dbdbd4cbb197d5c4dacdfd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d19a39736fc70e4f9ba95b283bcdebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 15
+  maxHitPoint: 5
+  currentHitPoint: 5
 --- !u!1 &1562084649372146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,8 +1232,8 @@ Transform:
   m_GameObject: {fileID: 1916827585214332}
   serializedVersion: 2
   m_LocalRotation: {x: 0.012699534, y: 0.0006308704, z: -0.012631614, w: 0.9998394}
-  m_LocalPosition: {x: -0.101131245, y: -0.0000000038146974, z: 0}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalPosition: {x: -0.101131245, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4134406593084566}
