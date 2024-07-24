@@ -7,6 +7,7 @@ TagManager:
   - enemyBug
   - Castle
   - SpawnAtRuntime
+  - Path
   layers:
   - Default
   - TransparentFX
