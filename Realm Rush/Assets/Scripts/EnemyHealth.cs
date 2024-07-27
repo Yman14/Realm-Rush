@@ -12,6 +12,7 @@ public class EnemyHealth : MonoBehaviour
     void OnEnable()
     {
         currentHitPoint = maxHitPoint;
+        gameObject.tag = "Enemy"; 
     }
 
     void OnParticleCollision(GameObject other)
@@ -29,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHitPoint <= 0)
         {
+            gameObject.tag = "DeadEnemy";   //change tag if dead
             transform.parent.gameObject.SetActive(false);
         }
     }

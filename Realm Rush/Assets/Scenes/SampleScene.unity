@@ -462,8 +462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1258991314359982, guid: 5d9fe2d65f4ff614794223f13188f570, type: 3}
-  enemySpawnTime: 1
-  enemyNum: 10
+  enemySpawnTime: 3
+  poolSize: 2
 --- !u!4 &364576838
 Transform:
   m_ObjectHideFlags: 0
@@ -2131,6 +2131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Silly Guy
       objectReference: {fileID: 0}
+    - target: {fileID: 1258991314359982, guid: 5d9fe2d65f4ff614794223f13188f570, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4887270080479870, guid: 5d9fe2d65f4ff614794223f13188f570, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2946,6 +2950,10 @@ PrefabInstance:
     - target: {fileID: 5691736490918785523, guid: caf5de64b4fc85b4eb789438f4db3e77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370151334680954455, guid: caf5de64b4fc85b4eb789438f4db3e77, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

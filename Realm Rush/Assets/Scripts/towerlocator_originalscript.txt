@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +8,9 @@ public class TowerLocator : MonoBehaviour
     [SerializeField] Transform weapon;
     [SerializeField] GameObject bullet;
 
-    List<GameObject> target = new List<GameObject>();
-
+    Transform target;
     GameObject currentTarget;
+    ObjectPool objectPool;
     bool targetLocked;
 
 
@@ -22,8 +21,10 @@ public class TowerLocator : MonoBehaviour
         //where the target was destroyed. very bad code
         //target = FindObjectOfType<EnemyMover>().transform;
 
+        
 
-        currentTarget = null;
+
+        target = null;
         targetLocked = false;
     }
 
@@ -31,67 +32,44 @@ public class TowerLocator : MonoBehaviour
     {
         targetIsActive();
         AimWeapon();
-        LockingTarget();
         if(currentTarget)
         {
             if(currentTarget.CompareTag("DeadEnemy"))
             {
-                target.Remove(currentTarget);
-                currentTarget = null;
+                target = null;
                 targetLocked = false;
-            }
-        }
-    }
-
-    void LockingTarget()
-    {
-        if(!targetLocked)
-        {
-            foreach(GameObject i in target)
-            {
-                if(i != null)
-                {
-                    currentTarget = i;
-                    targetLocked = true;
-                    break;
-                }
             }
         }
     }
 
     private void AimWeapon()
     {
-        if(currentTarget != null)
-        {
-            weapon.LookAt(currentTarget.transform);
-        }
+        weapon.LookAt(target);
     }
 
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy" && !targetLocked)
         {
-            target.Add(other.gameObject);      
+            Debug.Log("Enemy Detected");
+            target = other.gameObject.transform;
+            targetLocked = true;
+            currentTarget = other.gameObject;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy" && other.gameObject == currentTarget)
         {
-            target.Remove(other.gameObject);
-
-            if(other.gameObject == currentTarget)
-            {
-                currentTarget = null;
-                targetLocked = false;
-            }
+            target = null;
+            targetLocked = false;
         }
     }
 
     void targetIsActive()
     {
-        if (currentTarget == null)
+        if (target == null)
         {
             bullet.SetActive(false);
         }

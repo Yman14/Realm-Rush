@@ -1,5 +1,7 @@
 cube size  - 5
 
+... ... ...
+
 put sphere collider as detector for enemy
 if enemy is detected, shoot else dont shoot
 
@@ -7,5 +9,18 @@ shoot by enabling or disabling partcle system
 
 partcle system is sht
 
+... ... ...
 
-tower locator script - 1bug
+[problem with collider]
+if the sphere collider of tower is on then i cant place the tower to some tiles
+however if i remove it then i can place as many tower as possible
+no solution yet
+im tired
+theory - it probably have to do with how i place the tower in the tile or scene and how it interact with the collider
+check with the related script
+
+found the problem - onmousedown
+
+... ... ... 
+
+

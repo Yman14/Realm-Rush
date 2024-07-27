@@ -8,7 +8,8 @@ public class ObjectPool : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] float enemySpawnTime = 1f;
-    [SerializeField] int poolSize = 5;   
+    [SerializeField] int poolSize = 5;
+    public int PoolSize{ get { return poolSize; } }
 
     GameObject[] pool;
 

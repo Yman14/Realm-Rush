@@ -17,7 +17,8 @@ public class Waypoint : MonoBehaviour
         towerPlacement = GameObject.FindWithTag("SpawnAtRuntime");
     }
 
-    void OnMouseDown()
+    //void OnMouseDown()
+    public void SpawnTower()
     {
         if(isPlaceable)
         {

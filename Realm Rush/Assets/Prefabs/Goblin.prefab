@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 8773676314018503938}
   m_Layer: 0
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 7678969109193357575}
   m_Layer: 0
   m_Name: Enemy_Bug
-  m_TagString: enemyBug
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d19a39736fc70e4f9ba95b283bcdebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoint: 5
+  maxHitPoint: 3
 --- !u!1 &1562084649372146
 GameObject:
   m_ObjectHideFlags: 0

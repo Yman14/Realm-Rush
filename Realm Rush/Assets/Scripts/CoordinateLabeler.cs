@@ -36,6 +36,7 @@ public class CoordinateLabeler : MonoBehaviour
         ToggleLabels();
     }
 
+    //Debugtool
     void ToggleLabels()
     {
         if(Input.GetKeyDown(KeyCode.C))

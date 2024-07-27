@@ -8,6 +8,10 @@ TagManager:
   - Castle
   - SpawnAtRuntime
   - Path
+  - Enemy
+  - Tower
+  - DeadEnemy
+  - Tile
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Tile
   - 
   - 
   - 
