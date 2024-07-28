@@ -23,4 +23,11 @@ found the problem - onmousedown
 
 ... ... ... 
 
+bug - if a tower placed at the end of the tiles and its current target was not killed but reach the end of the world then it will just keep shooting even after the enemy disappeared
+
+posible solution - change the tag of the end to "DeadEnemy" if they reach the end of the world;
+
+... ... ...
+
+
 

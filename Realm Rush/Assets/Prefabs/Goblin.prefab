@@ -553,6 +553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2297a700bb59f54eabb6187227f277c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rewardGold: 15
+  penaltyGold: 25
 --- !u!1 &1300070071406548
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +794,7 @@ GameObject:
   - component: {fileID: 54286000085106508}
   - component: {fileID: 7678969109193357575}
   m_Layer: 0
-  m_Name: Enemy_Bug
+  m_Name: Heart
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,6 +926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitPoint: 3
+  difficultyRamp: 1
 --- !u!1 &1562084649372146
 GameObject:
   m_ObjectHideFlags: 0

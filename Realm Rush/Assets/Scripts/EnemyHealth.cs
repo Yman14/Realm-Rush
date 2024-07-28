@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHitPoint = 5;
+    [Tooltip("Hitpoint increase after dying")]
+    [SerializeField] int difficultyRamp = 1;
     
     int currentHitPoint;
 
@@ -38,6 +40,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHitPoint <= 0)
         {
             enemy.RewardGold();
+            maxHitPoint += difficultyRamp;
             gameObject.tag = "DeadEnemy";   //change tag if dead
             transform.parent.gameObject.SetActive(false);
         }

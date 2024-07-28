@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyScript))]
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
@@ -35,7 +36,11 @@ public class EnemyMover : MonoBehaviour
 
         foreach(Transform child in parent.transform)
         {
-            path.Add(child.GetComponent<Waypoint>());
+            Waypoint waypoint = child.GetComponent<Waypoint>();
+            if (waypoint != null)
+            {
+                path.Add(waypoint);
+            }
         }
     }
 
@@ -55,12 +60,22 @@ public class EnemyMover : MonoBehaviour
                 transform.position = Vector3.Lerp(startPosition, endPosition, travelPercent);
                 yield return null;
             }
-
-            
         }
 
+        FinishPath();
+        
+    }
+
+    void FinishPath()
+    {
         enemy.PenaltyGold();
+        ChangeTag(); // change tag if reach the end without dying
         gameObject.SetActive(false);
     }
 
+    void ChangeTag()
+    {
+        Transform heart = transform.Find("Heart"); //caution with the text, the name might change later
+        heart.gameObject.tag = "DeadEnemy";
+    }
 }

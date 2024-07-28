@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[RequireComponent(typeof(Waypoint))]
 public class TargetClickHandler : MonoBehaviour
 {
     public LayerMask targetLayerMask;  // Set this in the Inspector to include only the layer of your target GameObject
