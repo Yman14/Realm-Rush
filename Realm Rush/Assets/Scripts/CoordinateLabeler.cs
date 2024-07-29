@@ -20,7 +20,7 @@ public class CoordinateLabeler : MonoBehaviour
         label = GetComponent<TextMeshPro>();
         waypoint = GetComponentInParent<Waypoint>();
 
-        label.enabled = false;
+        label.enabled = true;
 
         DisplayCoordinates();
     }

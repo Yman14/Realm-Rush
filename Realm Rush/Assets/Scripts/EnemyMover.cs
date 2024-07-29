@@ -26,7 +26,10 @@ public class EnemyMover : MonoBehaviour
 
     void ReturnToStart()
     {
-        transform.position = path[0].transform.position;
+        if(path != null)
+        {
+            transform.position = path[0].transform.position;
+        }
     }
 
     void FindPath()
@@ -78,4 +81,5 @@ public class EnemyMover : MonoBehaviour
         Transform heart = transform.Find("Heart"); //caution with the text, the name might change later
         heart.gameObject.tag = "DeadEnemy";
     }
+
 }

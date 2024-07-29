@@ -28,6 +28,22 @@ bug - if a tower placed at the end of the tiles and its current target was not k
 posible solution - change the tag of the end to "DeadEnemy" if they reach the end of the world;
 
 ... ... ...
+keycode
+x = show placeable tile
+c = show coordinates
+
+... ... ...
+level 0
+
+[Clear Condition]
+required gold: 300
+boss kill: 1
+
+[instruction]
+place 5 towers in optimal position then wait for gold to reach 300
+once the boss was summoned then use all gold to buy towers
+
+... ... ...
 
 
 

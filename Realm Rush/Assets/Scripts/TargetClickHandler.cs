@@ -44,8 +44,10 @@ public class TargetClickHandler : MonoBehaviour
             {
                 if (hit.collider.gameObject == gameObject)
                 {
-                    bank.Withdraw(cost);
-                    waypoint.SpawnTower();
+                    if(waypoint.SpawnTower())
+                    {
+                        bank.Withdraw(cost);
+                    }
                 }
             }
         }

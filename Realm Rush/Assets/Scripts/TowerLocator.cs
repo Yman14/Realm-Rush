@@ -45,7 +45,7 @@ public class TowerLocator : MonoBehaviour
 
     void LockingTarget()
     {
-        if(!targetLocked)
+        if(!targetLocked && target != null)
         {
             foreach(GameObject i in target)
             {
@@ -89,6 +89,7 @@ public class TowerLocator : MonoBehaviour
         }
     }
 
+
     void targetIsActive()
     {
         if (currentTarget == null)
@@ -99,6 +100,8 @@ public class TowerLocator : MonoBehaviour
             bullet.SetActive(true);
         }
     }
+
+    
 
 
 }
