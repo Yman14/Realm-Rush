@@ -12,6 +12,8 @@ public class Bank : MonoBehaviour
 
     [SerializeField] GameObject boss;
 
+    int bossSummoningCost = 200;
+
     void Awake ()
     {
         currentBalance = startingBalance;
@@ -44,7 +46,7 @@ public class Bank : MonoBehaviour
         {
             return;
         }
-        if (currentBalance >= 300)
+        if (currentBalance >= bossSummoningCost)
         {
             boss.SetActive(true);
         }

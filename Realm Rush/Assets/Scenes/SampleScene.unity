@@ -367,6 +367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Silly Guy
       objectReference: {fileID: 0}
+    - target: {fileID: 6790261066354296336, guid: 9af16e737c2473b4ca559d4c0639e1ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
