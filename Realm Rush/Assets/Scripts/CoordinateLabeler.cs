@@ -22,7 +22,7 @@ public class CoordinateLabeler : MonoBehaviour
         label = GetComponent<TextMeshPro>();
         gridManager = FindObjectOfType<GridManager>();
 
-        label.enabled = true;
+        label.enabled = false;
 
         DisplayCoordinates();
     }
@@ -74,9 +74,10 @@ public class CoordinateLabeler : MonoBehaviour
 
     void DisplayCoordinates()
     {
-        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x); //might cause error when build
-        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.x);
-
+        if (gridManager == null){return;}
+        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / gridManager.UnityGridSize); //might cause error when build
+        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / gridManager.UnityGridSize);
+        
         label.text = $"{coordinates.x},{coordinates.y}";
     }
 

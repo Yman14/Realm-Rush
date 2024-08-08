@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19bbc66870a02ad4fb20d5ab0ae06801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 4, y: 4}
+  gridSize: {x: 5, y: 5}
+  unityGridSize: 10
 --- !u!4 &226134809
 Transform:
   m_ObjectHideFlags: 0
@@ -180,11 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff79afc55d923fa4982e412c3082a0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSearchNode:
-    coordinates: {x: 3, y: 3}
-    isWalkable: 0
-    isExplored: 0
-    isPath: 0
+  startingCoordinates: {x: 0, y: 0}
+  destinationCoordinates: {x: 4, y: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +376,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2024352956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6790261066354296336, guid: 9af16e737c2473b4ca559d4c0639e1ad, type: 3}
+  m_PrefabInstance: {fileID: 1228229157254301941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1228229157254301941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -451,6 +454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bank
       objectReference: {fileID: 0}
+    - target: {fileID: 1500437932570542344, guid: 8b1c521c39f7a3a428ee9879cfbb0dd7, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 2024352956}
     - target: {fileID: 2237279170647095590, guid: 8b1c521c39f7a3a428ee9879cfbb0dd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

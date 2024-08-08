@@ -36,7 +36,7 @@ c = show coordinates
 level 0
 
 [Clear Condition]
-required gold: 300
+required gold: 200
 boss kill: 1
 
 [instruction]

@@ -1,10 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
@@ -37,8 +31,9 @@ public class Pathfinder : MonoBehaviour
 
     void Start()
     {
-        startNode = gridManager.Grid[startingCoordinates];
-        destinationNode = gridManager.Grid[destinationCoordinates];
+        //shared reference if no new variable created, this is just a reference to the grid node
+        startNode = grid[startingCoordinates];
+        destinationNode = grid[destinationCoordinates];
 
         BreathSearchFirst();
         BuildPath();
@@ -55,17 +50,17 @@ public class Pathfinder : MonoBehaviour
             {
                 neighbors.Add(grid[neighborCoords]);
             }
+        }
 
-            foreach(Node neighbor in neighbors)
+        foreach(Node neighbor in neighbors)
             {
-                if(!pathTracked.ContainsKey(neighbor.coordinates) && neighbor.isWalkable == true)
+                if(!pathTracked.ContainsKey(neighbor.coordinates) && neighbor.isWalkable)
                 {
                     neighbor.connectedTo = currentSearchNode;
                     frontier.Enqueue(neighbor);
                     pathTracked.Add(neighbor.coordinates, neighbor);
                 }
             }
-        }
     }
 
     void BreathSearchFirst()

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Waypoint : MonoBehaviour
+public class Tile : MonoBehaviour
 {
     [SerializeField] bool isPlaceable;
     public bool IsPlaceable{    get { return isPlaceable; }}
@@ -13,10 +13,28 @@ public class Waypoint : MonoBehaviour
     
     [Tooltip("Towers spawn at runtime will be place here.")]GameObject towerPlacement;
 
+    GridManager gridManager;
+    Vector2Int coordinates = new Vector2Int();
+
+    void Awake()
+    {
+        gridManager = FindObjectOfType<GridManager>();
+    }
+
 
     void Start()
     {
         towerPlacement = GameObject.FindWithTag("SpawnAtRuntime");
+
+        if(gridManager != null)
+        {
+            coordinates = gridManager.GetCoordinatesFromPosition(transform.position);
+            
+            if(!isPlaceable)
+            {
+                gridManager.BlockNode(coordinates);
+            }
+        }
     }
 
     void Update()

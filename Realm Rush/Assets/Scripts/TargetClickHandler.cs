@@ -1,18 +1,18 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Waypoint))]
+[RequireComponent(typeof(Tile))]
 public class TargetClickHandler : MonoBehaviour
 {
     public LayerMask targetLayerMask;  // Set this in the Inspector to include only the layer of your target GameObject
 
-    Waypoint waypoint;
+    Tile waypoint;
     Bank bank;
     int cost = 75;
 
     void Start ()
     {
-        waypoint = GetComponent<Waypoint>();
+        waypoint = GetComponent<Tile>();
         bank = FindObjectOfType<Bank>();
     }
 
